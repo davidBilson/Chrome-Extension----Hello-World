@@ -1,0 +1,43 @@
+Chrome extensions are small programs tha add functionality to the chrome browser
+Prerequisites: HTML - CSS - JS
+THE BIG PICTURE
+Manifest + HTML + CSS + JS = .crx zipped file = Chrome Web Store
+
+3 Types of Chrome Extension
+1. Browser Action Extensions:
+- stays in browser tool bar and it is accessible at all times
+2. Page Action Extension
+- works only on certain pages that is already decided by the developer
+- it stays in tool bar but it is greyed out
+3. Neither BA or PA - runs in the background
+
+First step to creating chrome extension is to write the manifest file
+
+MANIFEST
+Manifest file is a special file that contains information about the chrome extension
+Manifest is a JSON formatted file
+Manifest must contain:
+- Manifest version
+- Name of extension
+- Version of extension
+- Description of extension
+- Specify icons that represent the extension - google recommends that one provide three icons of different sizes 128x128 , 48x48 , 16x16 so that it can choose the right icon depending on where it the extension is being displayed
+
+SUMMARY FOR MANIFEST
+{
+    "manifest_version" : 3,
+    "name": "Hello World",
+    "version": "1.0",
+    "description": "Hello World Extension",
+    "icons": {
+        "128": "icon128.jpeg",
+        "48": "icon48.jpeg",
+        "16": "icon16.jpeg"
+    },
+    "browser-action": {
+        "default_icon":"icon16.jpeg", 
+        "default_popup": "popup.html"
+    }
+}
+
+extension can have one or more html page
